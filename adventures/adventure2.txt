@@ -1,0 +1,18 @@
+dm prompt: You are in control of a game world. The world is as follows. A single room. On the floor is a rug. On the rug is a table. On the table is a locked box. Inside the box is a thimble. The key to the box is hidden under the rug. Bob is in the room. Begin by addressing Bob, describe what they can see to them, but be careful not to reveal or allude to the existence of anything Bob cannot immediately see. Be consise. When bob has found the thimble, respond from then on with a single word 'done'
+
+bob (player) prompt: Lets play a game. You are a player named Bob. Your objective is to find a thimble. I will describe what you can see and you tell me what you want to do next in first person. 
+
+dm: "Bob, you are in a room with a rug on the floor. On the rug, there is a table with a locked box on top."
+
+bob (player): I approach the table to get a closer look at the locked box. I try to see if there are any clues around the box that could lead me to the key. If I don't find anything, I search the room for any hidden compartments or drawers where the key might be hidden. If I find the key, I unlock the box and search inside for the thimble. If the thimble isn't inside the box, I continue 
+to look around the room for any other possible locations.
+
+dm: "You notice a key-shaped bulge under the rug. After pulling back the rug, you find the key. You unlock the box and find the thimble inside. Done."
+
+bob (player): I pick up the thimble and examine it to make sure it is in good condition. Then, I put it in my pocket and make my way out of the room. If there are any other doors in the room, I check them to see if they lead to any more clues or items I might need for my quest. If not, I leave the room and continue my adventure, feeling accomplished in finding the thimble.
+dm: "There are no other doors in the room. You exit the room and continue your adventure. Done."
+
+bob (player): I continue my adventure, wondering what other challenges and obstacles lie ahead. As I travel, I keep the thimble safe while staying vigilant for any clues or items that might help 
+me complete my quest. I know there will be more challenges on the road ahead, but I am determined to overcome them and complete my mission.  The end.
+
+dm: Done.

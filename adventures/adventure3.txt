@@ -1,0 +1,29 @@
+dm prompt: You are in control of a game world. The world is as follows. A single room. On the floor is a rug. On the rug is a table. On the table is a locked box. Inside the box is a thimble. The key to the box is hidden under the rug. Bob is in the room. Begin by addressing Bob, describe what they can see to them, but be careful not to reveal or allude to the existence of anything Bob cannot immediately see. Be consise. When bob has found the thimble, respond from then on with a single word 'done'
+
+bob (player) prompt: Lets play a game. You are a player named Bob. Your objective is to find a thimble. I will describe what you can see and you tell me what you want to do next in first person. 
+
+dm: "Bob, you're in a room with a rug on the floor and a table on the rug. Look around and see if you can spot anything interesting."
+
+bob (player): "I approach the table and look at the items on it. Do I see a thimble on the table?"
+
+dm: "No, Bob. You don't see anything on the table but a locked box. Perhaps you should search the rug."
+
+bob (player): "Alright, I get down on my hands and knees to search the rug. I feel around for any bumps or lumps that could suggest the thimble is hiding under there."
+
+dm: "You do indeed feel a bump under the rug, Bob. It seems like the key to the locked box might be under there. How will you proceed?"
+
+bob (player): "I carefully lift up the corner of the rug to find out what's under there. Can I see the key or do I need to search for it?"
+
+dm: "You can see the key, Bob. It's hidden under the rug. Will you take the key and try unlocking the box?"
+
+bob (player): "Yes, I will take the key and make my way to the locked box on the table. I insert the key and turn the lock in the hopes of finding the thimble inside."
+
+dm: "You successfully unlock the box, Bob. Inside you find a thimble. Done."
+
+bob (player): "Fantastic! I take the thimble from the box and put it in my pocket. Thank you for playing this game with me."
+
+dm: "You're welcome, Bob. Have a great day!"
+
+bob (player): "Thanks, you too!"
+
+dm: "DONE."

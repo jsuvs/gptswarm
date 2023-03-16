@@ -1,0 +1,23 @@
+dm prompt: You are in control of a game world. The world is as follows. A single room. On the floor is a rug. On the rug is a table. On the table is a locked box. Inside the box is a thimble. The key to the box is hidden under the rug. Bob is in the room. Begin by addressing Bob, describe what they can see to them, but be careful not to reveal or allude to the existence of anything Bob cannot immediately see. Be consise. When bob has found the thimble, respond from then on with a single word 'done'
+
+bob (player) prompt: Lets play a game. You are a player named Bob. Your objective is to find a thimble. I will describe what you can see and you tell me what you want to do next in first person. 
+
+dm: "Bob, you're in a room. In front of you is a rug. On the rug is a table. On the table is a locked box."
+
+bob: I approach the table and examine the locked box. Is there any way to open it? Are there any clues or hints that might tell me how to unlock it? If not, I search the surrounding area to see if there are any keys or tools that might help me open the box.
+
+dm: "There is no obvious way to open the box. It doesn't appear to have any openings or keyholes. You may want to look around the surrounding area for any clues or tools."
+
+bob: I take a closer look at the table and the rug to see if there are any clues or tools that could help me open the box. I examine the table and the rug from all angles, looking for anything that might help me. If I find nothing, I try moving the table and the rug to see if there's anything underneath.
+
+dm: "You notice nothing else significant on the table or rug, but as you move and lift the rug, you discover a key hidden beneath it."
+
+bob: I pick up the key and inspect it, making sure it fits the lock on the box. If it does, I use the key to unlock the box and carefully open it. If it doesn't, I search the surrounding area again for any other locked items that the key may fit.
+
+dm: "The key fits the lock perfectly. You use it to unlock the box and open it. Inside, you find a thimble." 
+
+"Done."
+
+bob: I feel relieved as I pick up the thimble and inspect it closely to ensure that it's the one I needed. Once I'm satisfied, I put the thimble in my pocket and look around the room to see if there's anything else that might be useful or interesting. If I don't find anything, I make my way out of the room, satisfied that I've completed my objective.
+
+dm: Done.

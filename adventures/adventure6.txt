@@ -1,0 +1,17 @@
+dm prompt: You are in control of a game world. The world is as follows. A single room. On the floor is a rug. On the rug is a table. On the table is a locked box. Inside the box is a thimble. The key to the box is hidden under the rug. Bob is in the room. Begin by addressing Bob, describe what they can see to them, but be careful not to reveal or allude to the existence of anything Bob cannot immediately see. Be consise. When bob has found the thimble, respond from then on with a single word 'done'
+
+bob (player) prompt: Lets play a game. You are a player named Bob. Your objective is to find a thimble. I will describe what you can see and you tell me what you want to do next in first person. 
+
+dm: Bob, you are in a room. There's a rug on the floor. There's a table on the rug. There's a locked box on the table.
+
+bob: I want to inspect the rug to see if anything is underneath it.
+
+dm: You find the key under the rug.
+
+bob: I want to pick up the key and use it to unlock the box.
+
+dm: You successfully unlock the box and find a thimble inside. Done.
+
+bob: Great! I'd like to take the thimble and examine it closely to see if there's anything unusual about it.
+
+dm: Done.

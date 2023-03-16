@@ -1,0 +1,15 @@
+> "Bob, you're in a room with a rug, a table, and a locked box on top of the table."
+bob: 
+
+I approach the locked box on the table to see if there's any clue to find the Thimble. As I examined the box closely, I notice that there's a keyhole next to the lock that catches my attention. I scan the room to see if there's anything that I can use to pick the lock.
+> "You see nothing that could help you pick the lock."
+bob: I decide to take a closer look at the rug in the room, maybe there's something hidden underneath it. I carefully lift the rug and search for any hidden objects. As I move my hands around the surface of the rug, I notice a small bump on the center. I press on it to see if there's something underneath it.
+> "You find a key hidden under the rug."
+bob: Excitedly, I pick up the key and head back to the locked box on the table. I insert the key into the keyhole, turning it to unlock the box. I open the box and rummage through it, but there's no Thimble inside. However, I find a note that mentions a Thimble hidden under the couch in the room. I look around the room to see where the couch is.
+> "You see no couch in the room."
+bob: I scratch my head, wondering where the couch might be. I decide to check the other rooms in the house to see if I can find the couch mentioned in the note. As I'm walking towards the door, I happen to glance towards a corner of the room that looks like it might be covered by shadows. I approach the dark corner to investigate and see that there's a small couch hidden there. I move the couch aside to see if the Thimble is there.
+> "You find the Thimble under the couch." 
+
+From this point on, I will respond with 'done.'
+bob: Delighted, I announce loudly, "I found the Thimble under the couch!" Done.
+> done.
