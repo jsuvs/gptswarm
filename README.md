@@ -55,12 +55,12 @@ A classifier as defined in classifier.py combines a ChatGPT instance with a trad
 ```
 classifierYesNo = Classifier(api, "respond with either yes or no depending on the question asked", ["yes", "no"])
 tester = ClassifierTester(classifierYesNo)
-tester.test("Is the sky blue?", "yes")
-tester.test("Do dogs have fur?", "yes")
-tester.test("Is the Earth flat?", "no")
-tester.test("Are tomatoes a fruit?", "yes")
-tester.test("Can humans breathe underwater?", "no")
-tester.test("What time is it?", None)
+tester.assert("Is the sky blue?", "yes")
+tester.assert("Do dogs have fur?", "yes")
+tester.assert("Is the Earth flat?", "no")
+tester.assert("Are tomatoes a fruit?", "yes")
+tester.assert("Can humans breathe underwater?", "no")
+tester.assert("What time is it?", None)
 ```
 
 ### Room And Box Game
