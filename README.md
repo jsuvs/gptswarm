@@ -21,7 +21,7 @@ while True:
 
 ### ChatGPT to ChatGPT
 
-The experients in this repository are aimed towards ChatGPT instances talking to one another and seeing what behavior can emerge from a swarm of ChatGPTs wired up. Can they coordinate themselves? A major obstacle is to ability of ChatGPT to obey instructions.
+The experients in this repository are aimed towards ChatGPT instances talking to one another rather than with people. The goal is to se whether more intelligent behavior can emerge from a swarm of ChatGPTs wired up. Can they set up to coordinate themselves?
 
 ### ChatGPT Disobeying Instructions
 
