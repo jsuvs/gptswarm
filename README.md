@@ -46,9 +46,9 @@ Part of this behavior is because ChatGPT has been instructed by openai to obey i
 #### Natural Language vs Traditional Programming
 The strength of a ChatGPT instance is that it can understand natural language inputs and can (largely) follow natural language based instructions. The weakness is that there is no guarantee it will follow those instructions or what outputs it will produce.
 
-This is the exact opposite of traditional programming. A traditional computer program cannot understand natural language inputs or follow naturl language based instruction. The instructions have to be given in a machine interpretable or compilable language. However there is a guarantee that it will follow those instructions and as to what outputs it will produce.
+This is the exact opposite of traditional programming. A traditional computer program cannot understand natural language inputs or follow natural language based instruction. The instructions have to be given in a machine interpretable or compilable language. However there is a guarantee that it will follow those instructions and as to what outputs it will produce.
 
-What about combining the two to get something that shares advantages? Perhaps adding a reliability layer simile to how a such a feature can be bolted on top of a network protocol. The idea is to detect when ChatGPT breaks a rule and correct it.
+What about combining the two to get something that shares advantages? Perhaps adding a reliability layer similar to how a such a feature can be bolted on top of a network protocol. The idea is to detect when ChatGPT breaks a rule and correct it.
 
 #### Classifier
 A classifier as defined in classifier.py combines a ChatGPT instance with a traditional computer program. Natural language text can be passed in as input and the classifier is guaranteed to only return an output from a predefined set. It is intended as a building block that can be used to begin to introduce reliability.
