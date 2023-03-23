@@ -10,10 +10,10 @@ class ChatApi:
         self.__retry_interval = 5
    
     #call chat completion api, retry on failure
-    def chat_completion_create(self, messages):
+    def chat_completion_create(self, messages, temperature=0.8):
         while True:
             try:
-                completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
+                completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages, temperature=temperature)
                 #get slowly faster
                 self.__retry_interval = max(self.__retry_interval - 1, self.__retry_interval_min)
                 break
