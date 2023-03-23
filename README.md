@@ -60,7 +60,7 @@ tester.assert("Do dogs have fur?", "yes")
 tester.assert("Is the Earth flat?", "no")
 tester.assert("Are tomatoes a fruit?", "yes")
 tester.assert("Can humans breathe underwater?", "no")
-tester.assert("What time is it?", None)
+tester.assert("What time is it?", None)   #None is returned indicating a failure to classify, in this case the question is not a yes/no question
 ```
 
 ### Room And Box Game
