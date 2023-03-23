@@ -1,7 +1,7 @@
 ## This repository contains ongoing ChatGPT API experiments
 
 ### quick background
-ChatGPT is a form of advanced auto-complete. It predicts the "best" words that follow from the text so far where "best" is defined as text humans would consider the ideal fit. If a human is given some text and asked to finish that text, they too would be answering questions, finishing stories, or any of the other things ChatGPT can do. ChatGPT appears intelligent and appears like it can understand natural language, because it is as good as humans - or better - at performing this text predicting task.
+ChatGPT is a form of advanced auto-complete. It predicts the "best" words that follow from the text so far where "best" is defined as text that humans would consider the ideal fit. If a human is given some text and asked to finish that text, they too would be answering questions, finishing stories, or any of the other things ChatGPT can do. ChatGPT appears intelligent and appears like it can understand natural language, because it is as good as humans - or better - at performing this text predicting task.
 
 ### ChatGPT as a chat bot
 Probably the most common use of ChatGPT is what it was designed for - us having conversations with it. The chatgpt.py in this repository can be used to create such a ChatGPT-like conversational bot:
