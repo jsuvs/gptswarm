@@ -11,5 +11,6 @@ Requirements
 - AWS account. Credentials set up with AWS CLI and with permissions to access AWS Polly and Transcribe services
 - OpenAI API access. Set OPENAI_API_KEY environment variable
 - A bunch of python libraries need to be imported
+- python main.py
 
 I'll tidy this up when I have time
