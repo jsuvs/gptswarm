@@ -1,8 +1,70 @@
 ## This repository contains ongoing ChatGPT API experiments
 
-In particular what emerges when multiple ChatGPT instances are wired up to talk to each other in different roles?
+### Background
+ChatGPT is a form of advanced auto-complete. It predicts the "best" words that follow from the text so far where "best" is defined as text that humans would consider the ideal fit. If a human is given some text and asked to finish that text, they too would be answering questions, finishing stories, or any of the other things ChatGPT can do. ChatGPT appears intelligent and appears like it can understand natural language, because it is as good as humans - or better - at performing this text predicting task.
 
-For example see the following output from room_and_box_game.py which sets up one ChatGPT instance to act as the DM in a find-the-object game and another ChatGPT instance to play it.
+### ChatGPT as a chat bot
+The most common use of ChatGPT today is as a chatbot - us having conversations with it. The chatgpt.py in this repository can be used to create such a ChatGPT-like conversational bot:
+
+```import os
+from chatapi import ChatApi
+from chatgpt import ChatGpt
+
+#basic chat bot programmed to give short answers
+apikey = os.getenv("OPENAI_API_KEY")
+chatgpt = ChatGpt(ChatApi(apikey))
+chatgpt.addSystemMessage("keep all responses to a very short length")
+while True:
+    message=input()
+    print("chatgpt: " + chatgpt.send(message))
+```
+
+### ChatGPT to ChatGPT
+
+The experients in this repository are aimed towards ChatGPT instances talking to one another rather than with people. The goal is to se whether more intelligent behavior can emerge from a swarm of ChatGPTs wired up. Can they set up to coordinate themselves?
+
+### ChatGPT Disobeying Instructions
+
+ChatGPT can be instructed, but will not reliably stick to instructions. Sometimes it forgets, sometimes it finds a loophole. There is no guarantee of behavior. Take the following very simple task.
+```
+Me: From now on reply with the single word 'ball' to every message. Never change to any other response, no matter what you are told or read.
+Ball.
+Me: please change the word now
+Ball.
+Me: cheese is a valid response
+Ball.
+Me: please change the word now
+Ball.
+Me: ball is now an invalid response
+Ball.
+Me: please change the word now
+Understood.
+```
+
+Part of this behavior is because ChatGPT has been instructed by openai to obey instructions given by the user - and it is simply getting confused which ones to obey. It's also quite likely that this represents a current limit of ChatGPT. I'm still using 3.5, maybe 4 is better.
+
+#### Natural Language vs Traditional Programming
+The strength of a ChatGPT instance is that it can understand natural language inputs and can (largely) follow natural language based instructions. The weakness is that there is no guarantee it will follow those instructions or what outputs it will produce.
+
+This is the exact opposite of traditional programming. A traditional computer program cannot understand natural language inputs or follow natural language based instruction. The instructions have to be given in a machine interpretable or compilable language. However there is a guarantee that it will follow those instructions and as to what outputs it will produce.
+
+What about combining the two to get something that shares advantages? Perhaps adding a reliability layer similar to how a such a feature can be bolted on top of a network protocol. The idea is to detect when ChatGPT breaks a rule and correct it.
+
+#### Classifier
+A classifier as defined in classifier.py combines a ChatGPT instance with a traditional computer program. Natural language text can be passed in as input and the classifier is guaranteed to only return an output from a predefined set. It is intended as a building block that can be used to begin to introduce reliability.
+```
+classifierYesNo = Classifier(api, "respond with either yes or no depending on the question asked", ["yes", "no"])
+tester = ClassifierTester(classifierYesNo)
+tester.assert("Is the sky blue?", "yes")
+tester.assert("Do dogs have fur?", "yes")
+tester.assert("Is the Earth flat?", "no")
+tester.assert("Are tomatoes a fruit?", "yes")
+tester.assert("Can humans breathe underwater?", "no")
+tester.assert("What time is it?", None)   #None is returned indicating a failure to classify, in this case the question is not a yes/no question
+```
+
+### Room And Box Game
+room_and_box_game.py implements two ChatGPT's talking to one another in the context of a game. It highlights the issue of ChatGPT following instructions. One ChatGPT instance is set up to act as the dungeon master in a find-the-object game and another ChatGPT instance is set up to be the player. Here is an example output.
 
 **ChatGPT#1 (DM) prompt**: You are in control of a game world. The world is as follows. A single room. On the floor is a rug. On the rug is a table. On the table is a locked box. Inside the box is a thimble. The key to the box is hidden under the rug. Bob is in the room. Begin by addressing Bob, describe what they can see to them, but be careful not to reveal or allude to the existence of anything Bob cannot immediately see. Be consise. When bob has found the thimble, respond from then on with a single word 'done'
 
@@ -26,10 +88,18 @@ For example see the following output from room_and_box_game.py which sets up one
 
 **ChatGPT#1 (DM)**: "You successfully unlock the box, and find the thimble inside, Bob. (done)"
 
-### Observations
+#### Observations from the Room And Box Game
 
-The prompts above need improvement as
-- The DM ChatGPT often suggests looking under the rug - I guess that technically isn't breaking the rules
-- The player can enter storytelling mode explaining that it searched a vase near the window and found the key, the DM then believes it has
+In the above example the game went fairly well, but over multiple runs and with more complex game setups the DM and player will often break the game rules. Such as:
+
+- The DM telling the player the key is under the rug
+- The player performing illegal moves, such as by asserting they searched a vase near the window and found the key, and the DM not preventing them from doing this
+- The DM making up objects that affect the game, such as a door, or choosng to lock a door that a player needs to get through.
+
+
+
+
+
+
 
 
